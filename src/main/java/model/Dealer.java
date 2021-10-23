@@ -2,8 +2,9 @@ package model;
 
 import model.rules.HitStrategy;
 import model.rules.NewGameStrategy;
-import model.rules.WinningStrategy;
 import model.rules.RulesFactory;
+import model.rules.WinningStrategy;
+
 
 /**
  * Represents a dealer player that handles the deck of cards and runs the game using rules.
