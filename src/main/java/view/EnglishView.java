@@ -15,6 +15,9 @@ public class EnglishView implements View {
     System.out.println("Hello Black Jack World");
   }
 
+  /**
+   * Shows menu for player action.
+   */
   public PlayerChoice displayGameMenu() {
     System.out.println("Type 'p' to Play, 'h' to Hit, 's' to Stand or 'q' to Quit\n");
     int input = getInput();
@@ -24,7 +27,7 @@ public class EnglishView implements View {
       choice = PlayerChoice.PLAY;
     } else if (input == 'h') {
       choice = PlayerChoice.HIT;
-    } else if(input == 's'){
+    } else if (input == 's') {
       choice = PlayerChoice.STAND;
     } else if (input == 'q') {
       choice = PlayerChoice.QUIT;

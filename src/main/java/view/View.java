@@ -10,6 +10,11 @@ public interface View {
    */
   void displayWelcomeMessage();
 
+  /**
+   * Dipslay menu asking for a player's choise.
+
+   * @return enum with player choice.
+   */
   PlayerChoice displayGameMenu();
 
   /**

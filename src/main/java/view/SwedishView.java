@@ -17,18 +17,21 @@ public class SwedishView implements View {
     System.out.println("----------------------");
   }
 
+  /**
+   * Shows menu for player action.
+   */
   public PlayerChoice displayGameMenu() {
-    System.out.println("Skriv 'p' för att Spela, 'h' för nytt kort, 's' för att stanna 'q' för att avsluta\n");
+    System.out.println("Skriv 's' för att spela, 'k' för nytt kort, 'p' för att passa 'a' för att avsluta\n");
     int input = getInput();
     PlayerChoice choice;
 
-    if (input == 'p') {
+    if (input == 's') {
       choice = PlayerChoice.PLAY;
-    } else if (input == 'h') {
+    } else if (input == 'k') {
       choice = PlayerChoice.HIT;
-    } else if(input == 's'){
+    } else if (input == 'p') {
       choice = PlayerChoice.STAND;
-    } else if (input == 'q') {
+    } else if (input == 'a') {
       choice = PlayerChoice.QUIT;
     } else {
       choice = PlayerChoice.NONE;

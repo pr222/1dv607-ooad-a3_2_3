@@ -28,11 +28,11 @@ public class Player {
     }
 
     PlayerChoice choice = view.displayGameMenu();
-    if(choice.equals(PlayerChoice.PLAY)) {
+    if (choice.equals(PlayerChoice.PLAY)) {
       game.newGame();
     } else if (choice.equals(PlayerChoice.HIT)) {
       game.hit();
-    } else if(choice.equals(PlayerChoice.STAND)){
+    } else if (choice.equals(PlayerChoice.STAND)) {
       game.stand();
     }
     
