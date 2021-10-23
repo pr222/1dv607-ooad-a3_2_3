@@ -1,3 +1,4 @@
+
 package model.rules;
 
 import model.Card;

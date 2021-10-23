@@ -23,9 +23,3 @@ class Soft17Strategy implements HitStrategy {
     return hit;
   }
 }
-
-
-
-
-
-

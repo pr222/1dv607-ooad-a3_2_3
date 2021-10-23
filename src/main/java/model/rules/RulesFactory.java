@@ -22,4 +22,8 @@ public class RulesFactory {
   public NewGameStrategy getNewGameRule() {
     return new AmericanNewGameStrategy();
   }
+
+  public WinningStrategy getWinningRule() {
+    return new DrawFavorsDealerStrategy();
+  }
 }
