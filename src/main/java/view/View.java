@@ -10,6 +10,8 @@ public interface View {
    */
   void displayWelcomeMessage();
 
+  PlayerChoice displayGameMenu();
+
   /**
    * Returns pressed characters from the keyboard.
 

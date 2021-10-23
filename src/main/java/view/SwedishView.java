@@ -15,7 +15,25 @@ public class SwedishView implements View {
 
     System.out.println("Hej Black Jack Världen");
     System.out.println("----------------------");
+  }
+
+  public PlayerChoice displayGameMenu() {
     System.out.println("Skriv 'p' för att Spela, 'h' för nytt kort, 's' för att stanna 'q' för att avsluta\n");
+    int input = getInput();
+    PlayerChoice choice;
+
+    if (input == 'p') {
+      choice = PlayerChoice.PLAY;
+    } else if (input == 'h') {
+      choice = PlayerChoice.HIT;
+    } else if(input == 's'){
+      choice = PlayerChoice.STAND;
+    } else if (input == 'q') {
+      choice = PlayerChoice.QUIT;
+    } else {
+      choice = PlayerChoice.NONE;
+    }
+    return choice;
   }
 
   /**

@@ -13,7 +13,25 @@ public class EnglishView implements View {
       System.out.print("\n");
     }
     System.out.println("Hello Black Jack World");
+  }
+
+  public PlayerChoice displayGameMenu() {
     System.out.println("Type 'p' to Play, 'h' to Hit, 's' to Stand or 'q' to Quit\n");
+    int input = getInput();
+    PlayerChoice choice;
+
+    if (input == 'p') {
+      choice = PlayerChoice.PLAY;
+    } else if (input == 'h') {
+      choice = PlayerChoice.HIT;
+    } else if(input == 's'){
+      choice = PlayerChoice.STAND;
+    } else if (input == 'q') {
+      choice = PlayerChoice.QUIT;
+    } else {
+      choice = PlayerChoice.NONE;
+    }
+    return choice;
   }
 
   /**
