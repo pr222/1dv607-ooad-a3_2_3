@@ -11,17 +11,21 @@ class Soft17Strategy implements HitStrategy {
     boolean hit = false;
 
     if (score < hitLimit) {
-        hit = true;
+      hit = true;
     } else if (score == 17) {
-        for (Card c : dealer.getHand()) {
-            if (c.getValue() != Card.Value.Ace) {
-                hit = true;
-            }
+      for (Card c : dealer.getHand()) {
+        if (c.getValue() != Card.Value.Ace) {
+          hit = true;
         }
+      }
     }
       
     return hit;
   }
 }
+
+
+
+
 
 
