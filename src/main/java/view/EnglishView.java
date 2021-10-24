@@ -89,17 +89,4 @@ public class EnglishView implements View {
       System.out.println("You Won!");
     }
   }
-
-  /**
-   * The updated hand is to be displayed.
-
-   * @param hand The updated hand.
-   */
-  public void displayHand(Iterable<model.Card> hand) {
-    for (model.Card card : hand) {
-      displayCard(card);
-    }
-  }
-
-  
 }

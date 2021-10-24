@@ -48,7 +48,10 @@ public class Player implements Subscriber {
     return !choice.equals(PlayerChoice.QUIT);
   }
  
-
+  /**
+   * Hand has been updated with new card, score calculated and a pause for dramatic purpose.
+   * 
+   */
   public void updateHand() {
     pause();
     view.displayDealerHand(game.getDealerHand(), game.getDealerScore());
@@ -57,7 +60,6 @@ public class Player implements Subscriber {
 
   private void pause() {
     try {
-      System.out.println("Cards are drawn");
       Thread.sleep(2 * 1000); 
     } catch (InterruptedException e) {
       e.printStackTrace();

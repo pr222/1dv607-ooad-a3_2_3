@@ -1,8 +1,9 @@
 package model;
 
-import java.util.LinkedList;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+
 /**
  * Represents a player in the Black Jack game. A Player has a hand of cards.
  */

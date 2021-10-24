@@ -103,17 +103,4 @@ public class SwedishView implements View {
     System.out.println("Poäng: " + score);
     System.out.println("");
   }
-
-  /**
-   * Display cards after new card is drawn.
-
-   * @param hand the players card that is to be displayed.
-   */
-  public void displayHand(Iterable<model.Card> hand) {
-    for (model.Card card : hand) {
-      displayCard(card);
-    }
-  }
-
- 
 }

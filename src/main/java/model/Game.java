@@ -97,7 +97,7 @@ public class Game {
     return player.calcScore();
   }
 
- public void addSubcriberToPlayer(Subscriber subscriber) {
+  public void addSubcriberToPlayer(Subscriber subscriber) {
     player.addSubscriber(subscriber);
   }
   
