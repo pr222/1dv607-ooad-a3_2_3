@@ -37,11 +37,18 @@ public class Deck {
 
    * @return the card to get and remove.
    */
-  public Card.Mutable getCard() {
+  private Card.Mutable getCard() {
     Card.Mutable c = cards.get(0);
     cards.remove(0);
 
     return c;
+  }
+
+  public void dealCard(Player player, boolean visible) {
+    Card.Mutable c;
+    c = getCard();
+    c.show(visible);
+    player.dealCard(c);
   }
 
   private void shuffle() {

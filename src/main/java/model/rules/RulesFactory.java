@@ -20,7 +20,7 @@ public class RulesFactory {
    * @return The rule to use.
    */
   public NewGameStrategy getNewGameRule() {
-    return new AmericanNewGameStrategy();
+    return new InternationalNewGameStrategy();
   }
 
   public WinningStrategy getWinningRule() {

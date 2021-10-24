@@ -52,10 +52,7 @@ public class Dealer extends Player {
    */
   public boolean hit(Player player) {
     if (deck != null && player.calcScore() < maxScore && !isGameOver()) {
-      Card.Mutable c;
-      c = deck.getCard();
-      c.show(true);
-      player.dealCard(c);
+      deck.dealCard(player, true);
 
       return true;
     }
@@ -92,9 +89,10 @@ public class Dealer extends Player {
       showHand();
       
       while (hitRule.doHit(this) == true) {
-        Card.Mutable c = deck.getCard();
-        c.show(true);
-        dealCard(c);
+        deck.dealCard(this, true);
+        // Card.Mutable c = deck.getCard();
+        // c.show(true);
+        // dealCard(c);
       }
 
       return true;
