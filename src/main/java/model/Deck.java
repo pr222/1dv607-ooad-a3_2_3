@@ -33,6 +33,20 @@ public class Deck {
   }
 
   /**
+   * Deal a card to a player showing och hiding the card's face value.
+
+   * @param player - the one who gets the card.
+   * @param visible - wether the card is to be dealt visible or not.
+   */
+  public void dealCard(Player player, boolean visible) {
+    Card.Mutable c;
+    c = getCard();
+    c.show(visible);
+
+    player.dealCard(c);
+  }
+
+  /**
    * Gets the first card in the deck. The card is removed from the deck.
 
    * @return the card to get and remove.
@@ -44,15 +58,7 @@ public class Deck {
     return c;
   }
 
-  public void dealCard(Player player, boolean visible) {
-    Card.Mutable c;
-    c = getCard();
-    c.show(visible);
-    player.dealCard(c);
-  }
-
   private void shuffle() {
-    
     for (int i = 0; i < 1017; i++) {
       int index = ThreadLocalRandom.current().nextInt(cards.size());
       Card.Mutable c = cards.get(index);
