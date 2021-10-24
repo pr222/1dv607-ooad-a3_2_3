@@ -15,8 +15,7 @@ public interface WinningStrategy {
    * @param maxScore The maximum score to compare points to.
    * @return boolean - true if dealer won.
    */
-    boolean dealerWon(Player player, Player dealer, int maxScore);
-
+  boolean dealerWon(Player player, Player dealer, int maxScore);
 }
     
  

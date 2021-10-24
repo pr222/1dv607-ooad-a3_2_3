@@ -104,13 +104,17 @@ public class SwedishView implements View, Subscriber {
     System.out.println("");
   }
 
-  public void updateHand(Iterable<model.Card> hand) { // handen eller playern
+  /**
+   * Display cards after new card is drawn.
+
+   * @param hand the players card that is to be displayed.
+   */
+  public void updateHand(Iterable<model.Card> hand) {
     pause();
 
     for (model.Card card : hand) {
       displayCard(card);
     }
-    // loopa hand och visa korten
   }
 
   private void pause() {

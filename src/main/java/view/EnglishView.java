@@ -90,6 +90,11 @@ public class EnglishView implements View, Subscriber {
     }
   }
 
+  /**
+   * The updated hand is to be displayed.
+
+   * @param hand The updated hand.
+   */
   public void updateHand(Iterable<model.Card> hand) {
     pause();
 
@@ -101,8 +106,8 @@ public class EnglishView implements View, Subscriber {
   private void pause() {
     try {
       Thread.sleep(5 * 1000); 
-  } catch (InterruptedException e) {
+    } catch (InterruptedException e) {
       e.printStackTrace();
-  }
+    }
   }
 }

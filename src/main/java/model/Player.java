@@ -1,18 +1,21 @@
 package model;
 
 import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
+import view.Subscriber;
 
 /**
  * Represents a player in the Black Jack game. A Player has a hand of cards.
  */
 public class Player {
-
+  private ArrayList<Subscriber> listOfSubscribers;
   private List<Card.Mutable> hand;
   protected final int maxScore = 21;
 
   public Player() {
     hand = new LinkedList<Card.Mutable>();
+    listOfSubscribers = new ArrayList<>();
   }
 
   /**
@@ -22,7 +25,8 @@ public class Player {
    */
   public void dealCard(Card.Mutable addToHand) {
     hand.add(addToHand);
-    // Send event
+
+    publishNewHand(getHand());
   }
 
   /**
@@ -80,5 +84,28 @@ public class Player {
     }
 
     return score;
+  }
+
+  /**
+   * Add a subscriber.
+   */
+  public void addSubscriber(Subscriber subscriber) {
+    listOfSubscribers.add(subscriber);
+  }
+
+  /**
+   * Remove subscriber.
+   */
+  public void removeSubscriber(Subscriber subscriber) {
+    listOfSubscribers.remove(subscriber);
+  }
+
+  /**
+   * Publish a new updated hand event.
+   */
+  public void publishNewHand(Iterable<Card> hand) {
+    for (Subscriber sub : listOfSubscribers) {
+      sub.updateHand(hand);
+    }
   }
 }
