@@ -101,7 +101,7 @@ public class Game {
     player.addSubscriber(subscriber);
   }
   
-  public void addSubcriberToDealer(model.Subscriber subscriber) {
+  public void addSubcriberToDealer(Subscriber subscriber) {
     dealer.addSubscriber(subscriber);
   }
  

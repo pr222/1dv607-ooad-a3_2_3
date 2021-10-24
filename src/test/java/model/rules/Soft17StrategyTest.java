@@ -28,7 +28,7 @@ public class Soft17StrategyTest {
   @Test void willNotWantToHit() {
     
     Player p2 = new Player();
-    HitStrategy strat2 = new BasicHitStrategy();
+    HitStrategy strat2 = new Soft17Strategy();
 
     Card.Mutable ace2 = new Card.Mutable(Card.Color.Clubs, Card.Value.Ace);
     Card.Mutable seven = new Card.Mutable(Card.Color.Clubs, Card.Value.Ten);

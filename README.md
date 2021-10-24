@@ -11,7 +11,3 @@ I classdiagrammet stoppa in ruta med PlayerChoice (ENUM) som View har dependency
 
 Interface Winning Strategy, factory är dependent på interfacet
 classerna DrawFavors implementerar Winning Strategy, 
-
-
-Testning
-Tester för Soft17Strategy
