@@ -3,13 +3,13 @@ package view;
 /**
  * Implements an english console view.
  */
-public class EnglishView implements View, Subscriber {
+public class EnglishView implements View {
 
   /**
    * Shows a welcome message.
    */
   public void displayWelcomeMessage() {
-    for (int i = 0; i < 50; i++) {
+    for (int i = 0; i < 5; i++) {
       System.out.print("\n");
     }
     System.out.println("Hello Black Jack World");
@@ -95,19 +95,11 @@ public class EnglishView implements View, Subscriber {
 
    * @param hand The updated hand.
    */
-  public void updateHand(Iterable<model.Card> hand) {
-    pause();
-
+  public void displayHand(Iterable<model.Card> hand) {
     for (model.Card card : hand) {
       displayCard(card);
     }
   }
 
-  private void pause() {
-    try {
-      Thread.sleep(5 * 1000); 
-    } catch (InterruptedException e) {
-      e.printStackTrace();
-    }
-  }
+  
 }

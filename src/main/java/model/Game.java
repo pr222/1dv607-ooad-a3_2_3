@@ -97,4 +97,19 @@ public class Game {
     return player.calcScore();
   }
 
+ public void addSubcriberToPlayer(Subscriber subscriber) {
+    player.addSubscriber(subscriber);
+  }
+  
+  public void addSubcriberToDealer(model.Subscriber subscriber) {
+    dealer.addSubscriber(subscriber);
+  }
+ 
+  public void removeSubcriberToPlayer(Subscriber subscriber) {
+    player.removeSubscriber(subscriber);
+  }
+  
+  public void removeSubcriberToDealer(Subscriber subscriber) {
+    dealer.removeSubscriber(subscriber);
+  }
 }

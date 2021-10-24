@@ -3,8 +3,6 @@ package model;
 import java.util.LinkedList;
 import java.util.ArrayList;
 import java.util.List;
-import view.Subscriber;
-
 /**
  * Represents a player in the Black Jack game. A Player has a hand of cards.
  */
@@ -105,7 +103,7 @@ public class Player {
    */
   public void publishNewHand(Iterable<Card> hand) {
     for (Subscriber sub : listOfSubscribers) {
-      sub.updateHand(hand);
+      sub.updateHand();
     }
   }
 }

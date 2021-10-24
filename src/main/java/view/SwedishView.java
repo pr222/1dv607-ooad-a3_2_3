@@ -3,7 +3,7 @@ package view;
 /**
  * Implements a Swedish console view.
  */
-public class SwedishView implements View, Subscriber {
+public class SwedishView implements View {
 
   /**
    * Shows a welcome message.
@@ -109,19 +109,11 @@ public class SwedishView implements View, Subscriber {
 
    * @param hand the players card that is to be displayed.
    */
-  public void updateHand(Iterable<model.Card> hand) {
-    pause();
-
+  public void displayHand(Iterable<model.Card> hand) {
     for (model.Card card : hand) {
       displayCard(card);
     }
   }
 
-  private void pause() {
-    try {
-      Thread.sleep(5 * 1000); 
-    } catch (InterruptedException e) {
-      e.printStackTrace();
-    }    
-  }
+ 
 }
