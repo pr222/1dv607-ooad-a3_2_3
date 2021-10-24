@@ -4,6 +4,10 @@ This document describes the current design. Note that some dependencies have bee
 ## Class Diagram
 The application uses the model-view-controller (MVC) architectural pattern. The view is passive and gets called from the controller. 
 
+### Updated class diagram
+![updated diagram](img/a3_class-diagram-high-res.png)
+
+### Old class diagram
 ![class diagram](img/class_diagram.jpg)
 
 ## Stand - Sequence Diagram
