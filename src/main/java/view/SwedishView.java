@@ -3,7 +3,7 @@ package view;
 /**
  * Implements a Swedish console view.
  */
-public class SwedishView implements View {
+public class SwedishView implements View, Subscriber {
 
   /**
    * Shows a welcome message.
@@ -102,5 +102,22 @@ public class SwedishView implements View {
     }
     System.out.println("Poäng: " + score);
     System.out.println("");
+  }
+
+  public void updateHand(Iterable<model.Card> hand) { // handen eller playern
+    pause();
+
+    for (model.Card card : hand) {
+      displayCard(card);
+    }
+    // loopa hand och visa korten
+  }
+
+  private void pause() {
+    try {
+      Thread.sleep(5 * 1000); 
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    }    
   }
 }

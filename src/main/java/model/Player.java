@@ -22,6 +22,7 @@ public class Player {
    */
   public void dealCard(Card.Mutable addToHand) {
     hand.add(addToHand);
+    // Send event
   }
 
   /**

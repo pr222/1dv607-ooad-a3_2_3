@@ -3,7 +3,7 @@ package view;
 /**
  * Implements an english console view.
  */
-public class EnglishView implements View {
+public class EnglishView implements View, Subscriber {
 
   /**
    * Shows a welcome message.
@@ -88,6 +88,21 @@ public class EnglishView implements View {
     } else {
       System.out.println("You Won!");
     }
+  }
 
+  public void updateHand(Iterable<model.Card> hand) {
+    pause();
+
+    for (model.Card card : hand) {
+      displayCard(card);
+    }
+  }
+
+  private void pause() {
+    try {
+      Thread.sleep(5 * 1000); 
+  } catch (InterruptedException e) {
+      e.printStackTrace();
+  }
   }
 }

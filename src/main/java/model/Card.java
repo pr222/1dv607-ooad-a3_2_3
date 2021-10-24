@@ -77,7 +77,7 @@ public class Card {
 
    * @return The card value.
    */
-  public Value getValue() {
+     public Value getValue() {
     if (isHidden) {
       return Value.Hidden;
     }
