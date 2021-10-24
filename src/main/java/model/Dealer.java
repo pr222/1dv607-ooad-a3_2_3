@@ -22,7 +22,6 @@ public class Dealer extends Player {
    * @param rulesFactory A factory that creates the rules to use.
    */
   public Dealer(RulesFactory rulesFactory) {
-
     newGameRule = rulesFactory.getNewGameRule();
     hitRule = rulesFactory.getHitRule();
     winRule = rulesFactory.getWinningRule();
@@ -90,9 +89,6 @@ public class Dealer extends Player {
       
       while (hitRule.doHit(this) == true) {
         deck.dealCard(this, true);
-        // Card.Mutable c = deck.getCard();
-        // c.show(true);
-        // dealCard(c);
       }
 
       return true;
