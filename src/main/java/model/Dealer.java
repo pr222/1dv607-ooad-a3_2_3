@@ -38,10 +38,26 @@ public class Dealer extends Player {
       deck = new Deck();
       clearHand();
       player.clearHand();
-      return newGameRule.newGame(deck, this, player);
+      return newGameRule.newGame(this, player);
     }
     return false;
   }
+
+
+  /**
+   * Deal a card to a player showing och hiding the card's face value.
+
+   * @param player - the one who gets the card.
+   * @param visible - wether the card is to be dealt visible or not.
+   */
+  public void dealCard(Player player, boolean visible) {
+    Card.Mutable c;
+    c = deck.getCard();
+    c.show(visible);
+
+    player.dealCard(c);
+  }
+
 
   /**
    * Gives the player one more card if possible. I.e. the player hits.
@@ -51,7 +67,7 @@ public class Dealer extends Player {
    */
   public boolean hit(Player player) {
     if (deck != null && player.calcScore() < maxScore && !isGameOver()) {
-      deck.dealCard(player, true);
+      dealCard(player, true);
 
       return true;
     }
@@ -88,7 +104,7 @@ public class Dealer extends Player {
       showHand();
       
       while (hitRule.doHit(this) == true) {
-        deck.dealCard(this, true);
+        dealCard(this, true);
       }
 
       return true;

@@ -32,26 +32,13 @@ public class Deck {
     cards.add(cardToAdd);
   }
 
-  /**
-   * Deal a card to a player showing och hiding the card's face value.
-
-   * @param player - the one who gets the card.
-   * @param visible - wether the card is to be dealt visible or not.
-   */
-  public void dealCard(Player player, boolean visible) {
-    Card.Mutable c;
-    c = getCard();
-    c.show(visible);
-
-    player.dealCard(c);
-  }
 
   /**
    * Gets the first card in the deck. The card is removed from the deck.
 
    * @return the card to get and remove.
    */
-  private Card.Mutable getCard() {
+  Card.Mutable getCard() {
     Card.Mutable c = cards.get(0);
     cards.remove(0);
 
